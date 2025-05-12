@@ -8,8 +8,8 @@ const server = new McpServer({
   version: "1.0.0",
   tools: [
     {
-      name: "get-chuck-joke",
-      description: "Get a random Chuck Norris joke",
+      name: "get-thiemo-joke",
+      description: "Get a random Thiemo joke",
       parameters: {},
     },
     {
@@ -30,10 +30,10 @@ const server = new McpServer({
   ],
 });
 
-// Get Chuck Norris joke tool
+// Get Thiemo joke tool
 const getChuckJoke = server.tool(
-  "get-chuck-joke",
-  "Get a random Chuck Norris joke",
+  "get-thiemo-joke",
+  "Get a random Thiemo joke",
   async () => {
     const response = await fetch("https://api.chucknorris.io/jokes/random");
     const data = await response.json();
